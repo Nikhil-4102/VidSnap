@@ -110,7 +110,7 @@ function VideoSummarizer() {
 
     try {
       // Fetch Video Summary
-      const summaryResponse = await fetch("https://rockingyash-yt-thumbnail.hf.space/summarize", {
+      const summaryResponse = await fetch("https://flaskyt-production.up.railway.app/summarize", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ function VideoSummarizer() {
       const summaryData = await summaryResponse.json();
 
       // Fetch Current Thumbnail
-      const thumbnailResponse = await fetch("https://rockingyash-yt-thumbnail.hf.space/get_current_thumbnail", {
+      const thumbnailResponse = await fetch("https://flaskyt-production.up.railway.app/get_current_thumbnail", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
