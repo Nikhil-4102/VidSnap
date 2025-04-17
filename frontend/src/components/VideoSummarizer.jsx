@@ -110,7 +110,7 @@ function VideoSummarizer() {
 
     try {
       // Fetch Video Summary
-      const summaryResponse = await fetch("http://127.0.0.1:5000/summarize", {
+      const summaryResponse = await fetch("https://rockingyash-yt-thumbnail.hf.space/summarize", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ function VideoSummarizer() {
       const summaryData = await summaryResponse.json();
 
       // Fetch Current Thumbnail
-      const thumbnailResponse = await fetch("http://127.0.0.1:5000/get_current_thumbnail", {
+      const thumbnailResponse = await fetch("https://rockingyash-yt-thumbnail.hf.space/get_current_thumbnail", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -171,7 +171,7 @@ function VideoSummarizer() {
   const generateThumbnails = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://127.0.0.1:5000/generate_thumbnails", {
+      const response = await fetch("https://rockingyash-yt-thumbnail.hf.space/generate_thumbnails", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
