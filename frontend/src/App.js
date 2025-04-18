@@ -8,7 +8,7 @@ function App() {
     return (
         <Router>
             <nav className="bg-gray-800 p-4 text-white flex justify-between items-center">
-                <div className="text-lg font-bold"><a href='/'>AI Thumbnail Generator</a></div>
+                <div className="text-lg font-bold"><a href='/'>VidSnap</a></div>
                 <div className="space-x-4 flex items-center">
                     <a href="/register" className="hover:text-gray-300">Register</a>
                     <a href="/signin" className="hover:text-gray-300">Login</a>
