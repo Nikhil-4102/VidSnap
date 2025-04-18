@@ -118,7 +118,7 @@ function VideoSummarizer() {
 
       if (!response.ok) throw new Error("Failed to generate thumbnails");
       const data = await response.json();
-      setGeneratedThumbnails(data.thumbnails);
+      setGeneratedThumbnails(data.public_id);
     } catch (err) {
       setError("Error generating thumbnails.");
       console.error(err);
