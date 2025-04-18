@@ -105,7 +105,7 @@ function VideoSummarizer() {
     setError("");
 
     try {
-      const response = await fetch("https://rockingyash-yt-thumbnail.hf.space/generate_thumbnails", {
+      const response = await fetch("https://flaskyt-production.up.railway.app/generate_thumbnails", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
