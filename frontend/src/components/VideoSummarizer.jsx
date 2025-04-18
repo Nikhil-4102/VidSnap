@@ -241,11 +241,11 @@ function VideoSummarizer() {
           <ProgressBar />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {generatedThumbnails.map((thumbnail, index) => (
+            {generatedThumbnails.map((public_id, index) => (
               <div key={index} className="bg-white p-4 rounded-lg shadow space-y-4">
-                <img src={thumbnail} alt={`Generated Thumbnail ${index + 1}`} className="rounded-lg w-full" />
+                <img src={ public_id } alt={`Generated Thumbnail ${index + 1}`} className="rounded-lg w-full" />
                 <button
-                  onClick={() => downloadImage(thumbnail)}
+                  onClick={() => downloadImage(public_id)}
                   className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 p-2 rounded flex items-center justify-center gap-2"
                 >
                   <Download className="h-4 w-4" />
