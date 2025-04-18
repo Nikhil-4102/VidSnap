@@ -26,7 +26,7 @@ function SignWithGoogle() {
                     position: "top-center",
                     autoClose: 4000,
                 });
-                window.location.href = "/summarizer";
+                window.location.href = "https://flaskyt-production.up.railway.app/summarizer";
             }
 
   });
