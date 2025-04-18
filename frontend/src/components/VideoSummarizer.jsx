@@ -5,7 +5,7 @@ function VideoSummarizer() {
   const [videoUrl, setVideoUrl] = useState("");
   const [summary, setSummary] = useState("");
   const [currentThumbnail, setCurrentThumbnail] = useState("");
-  const [generatedThumbnails, setGeneratedThumbnails] = useState([]);
+  const [generatedThumbnails, setGeneratedThumbnails] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [urlError, setUrlError] = useState("");
@@ -241,18 +241,23 @@ function VideoSummarizer() {
           <ProgressBar />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {generatedThumbnails.map((public_id, index) => (
-              <div key={index} className="bg-white p-4 rounded-lg shadow space-y-4">
-                <img src={ public_id } alt={`Generated Thumbnail ${index + 1}`} className="rounded-lg w-full" />
-                <button
-                  onClick={() => downloadImage(public_id)}
-                  className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 p-2 rounded flex items-center justify-center gap-2"
-                >
-                  <Download className="h-4 w-4" />
-                  <span>Download</span>
-                </button>
-              </div>
-            ))}
+{generatedThumbnails ? (
+  <div className="bg-white p-4 rounded-lg shadow space-y-4">
+    <img
+      src={generatedThumbnails}
+      alt="Generated Thumbnail"
+      className="rounded-lg w-full"
+    />
+    <button
+      onClick={() => downloadImage(generatedThumbnails)}
+      className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 p-2 rounded flex items-center justify-center gap-2"
+    >
+      <Download className="h-4 w-4" />
+      <span>Download</span>
+    </button>
+  </div>
+) : null}
+
           </div>
         </section>
       </main>
